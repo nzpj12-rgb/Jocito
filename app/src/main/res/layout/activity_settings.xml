@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F0F0F">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Configuración Técnica"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="#1A1A1A"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Estado del Hardware"
+                    android:textColor="#00E5FF"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="● GPS Neo-6M: CONECTADO"
+                    android:textColor="#4CAF50"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="● Batería Vehículo: 12.6V (Ok)"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sensibilidad de Proximidad"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="8dp"/>
+
+        <SeekBar
+            android:id="@+id/seekBarProximidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="10"
+            android:progress="3"
+            android:progressTint="#00E5FF"
+            android:thumbTint="#00E5FF"/>
+
+        <TextView
+            android:id="@+id/tvDistanciaConfig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Desbloqueo automático a: 3 metros"
+            android:textColor="#BBBBBB"
+            android:textSize="12sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"/>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Modo Centinela (Fotos automáticas)"
+            android:textColor="#FFFFFF"
+            android:checked="true"
+            app:thumbTint="#00E5FF"/>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Alerta por vibración (Acelerómetro)"
+            android:textColor="#FFFFFF"
+            app:thumbTint="#00E5FF"/>
+
+        <Button
+            android:id="@+id/btnTestAlarma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="PROBAR SIRENA DE AUTO"
+            android:backgroundTint="#1A1A1A"
+            app:strokeColor="#FF9800"
+            app:strokeWidth="1dp"
+            app:cornerRadius="12dp"/>
+
+    </LinearLayout>
+</ScrollView>
